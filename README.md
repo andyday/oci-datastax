@@ -1,8 +1,9 @@
 # oci-datastax
 [simple](simple) is a Terraform module that will deploy DSE on OCI.  Instructions on how to use it are below.  Best practices are detailed in [this document](bestpractices.md).
 
-<!--QSGEN-->
+<!--QSGEN-START-->
 [Deploy simple to OCI](https://console.r1.oracleiaas.com/orm?configoverride=%7B%22plugins%22%3A%7B%22orm%22%3A%7B%22name%22%3A%22orm%22%2C%22path%22%3A%22%2Form%22%2C%22url%22%3A%22https%3A%2F%2Flocalhost%3A8484%22%2C%22loadMethod%22%3A0%2C%22globals%22%3A%5B%22webpackJsonpoci_resourcemanager_plugin%22%2C%22ouiUIkit%22%2C%22ouiUIkitIcons%22%5D%7D%7D%7D&qs=eyJyZXBvIjoiYW5keWRheS9vY2ktZGF0YXN0YXgiLCJkaXIiOiJzaW1wbGUiLCJ2YXJpYWJsZXMiOnsiZHNlIjoie1wibm9kZV9jb3VudFwiOlwiM1wiLFwicGFzc3dvcmRcIjpcImFkbWluXCIsXCJzaGFwZVwiOlwiVk0uU3RhbmRhcmQyLjRcIixcInVzZXJuYW1lXCI6XCJhZG1pblwiLFwidmVyc2lvblwiOlwiNi4wLjJcIn0iLCJmaW5nZXJwcmludCI6IiIsImltYWdlcyI6IntcImV1LWZyYW5rZnVydC0xXCI6XCJvY2lkMS5pbWFnZS5vYzEuZXUtZnJhbmtmdXJ0LTEuYWFhYWFhYWEzdGwzcGhiZ2R5empiYTY0aDJ0Z3Vubnd6eGJ4dHc0cjM2dTR0dG5zbjNtNzd0NmpjdXJxXCIsXCJ1ay1sb25kb24tMVwiOlwib2NpZDEuaW1hZ2Uub2MxLnVrLWxvbmRvbi0xLmFhYWFhYWFhaXp6YmNlcXhhZGFnZ2JjaGY2eWFzanJhbGNxZGxoMnRtZ2NhNmFnNWI0Z3ZjZzRrNHJoYVwiLFwidXMtYXNoYnVybi0xXCI6XCJvY2lkMS5pbWFnZS5vYzEuaWFkLmFhYWFhYWFhN2tlYjNvazJkZXlueHpzejdrNXJvbmRodWM3bnQ1dnc2aGYzcTV4c2x5aWVwbnFzaTNhcVwiLFwidXMtcGhvZW5peC0xXCI6XCJvY2lkMS5pbWFnZS5vYzEucGh4LmFhYWFhYWFhZnJ0NW9sa29naXcyeG43NHNzdTRtam52N2Uyd2dxa214d3VvNGtxaWhnZ3Q3NGJtZ3B6YVwifSIsInByaXZhdGVfa2V5X3BhdGgiOiIiLCJyZWdpb24iOiIiLCJzc2hfcHJpdmF0ZV9rZXkiOiIiLCJzc2hfcHVibGljX2tleSI6IiIsInRlbmFuY3lfb2NpZCI6IiIsInVzZXJfb2NpZCI6IiJ9fQ)
+<!--QSGEN-STOP-->
 
 ## Prerequisites
 First off you'll need to do some pre deploy setup.  That's all detailed [here](https://github.com/cloud-partners/oci-prerequisites).
