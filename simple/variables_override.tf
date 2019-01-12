@@ -6,35 +6,29 @@
 
 # Required by the OCI Provider
 variable "tenancy_ocid" {}
+variable "user_ocid" {}
+variable "fingerprint" {}
+variable "private_key_path" {}
 variable "region" {}
 
 # Key used to SSH to OCI VMs
-# variable "ssh_public_key" {}
-# variable "ssh_private_key" {}
+variable "ssh_public_key" {}
+variable "ssh_private_key" {}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Optional variables
 # The defaults here will give you a cluster.  You can also modify these.
 # ---------------------------------------------------------------------------------------------------------------------
 
-variable "instance_shape" {
-  default = "VM.Standard2.4"
-}
-
-variable "node_count" {
-  default = "3"
-}
-
-variable "dse_username" {
-  default = "admin"
-}
-
-variable "dse_password" {
-  default = "admin"
-}
-
-variable "dse_version" {
-  default = "6.0.2"
+variable "dse" {
+  type = "map"
+  default = {
+    shape = "VM.Standard2.4"
+    node_count = 3
+    username = "admin"
+    password = "admin"
+    version = "6.0.2"
+  }
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
