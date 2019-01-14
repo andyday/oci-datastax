@@ -20,16 +20,16 @@ variable "ssh_private_key" {}
 # The defaults here will give you a cluster.  You can also modify these.
 # ---------------------------------------------------------------------------------------------------------------------
 
-variable "dse" {
-  type = "map"
-  default = {
-    shape = "VM.Standard2.4"
-    node_count = 3
-    username = "admin"
-    password = "admin"
-    version = "6.0.2"
-  }
-}
+# variable "dse" {
+#   type = "map"
+#   default = {
+#     shape = "VM.Standard2.4"
+#     node_count = 3
+#     username = "admin"
+#     password = "admin"
+#     version = "6.0.2"
+#   }
+# }
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Constants

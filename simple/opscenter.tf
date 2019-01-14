@@ -12,10 +12,10 @@ resource "oci_core_instance" "opscenter" {
     ssh_authorized_keys = "${var.ssh_public_key}"
     user_data           = "${base64encode(format("%s\n%s\n%s\n%s\n%s\n%s\n%s\n",
       "#!/usr/bin/env bash",
-      "username=${var.dse["username"]}",
-      "password=${var.dse["password"]}",
-      "node_count=${var.dse["node_count"]}",
-      "version=${var.dse["version"]}",
+      "username=${var.dse_username}",
+      "password=${var.dse_password}",
+      "node_count=${var.node_count}",
+      "version=${var.version}",
       "echo ${base64encode(var.ssh_private_key)} | base64 -d > ~/.ssh/oci",
       file("../scripts/opscenter.sh")
     ))}"
