@@ -5,17 +5,15 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 # Required by the OCI Provider
-variable "tenancy_ocid" {
-  description = "Tenancy Id"
-}
+variable "tenancy_ocid" {}
 variable "region" {}
 
 # Key used to SSH to OCI VMs
 variable "ssh_public_key" {
-  description = "Public SSH Key for node access"
+  description = "1. Public SSH Key for node access"
 }
 variable "ssh_private_key" {
-  description = "Private SSH Key for node access"
+  description = "2. Private SSH Key for node access"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -25,27 +23,27 @@ variable "ssh_private_key" {
 
 variable "node_shape" {
   default = "VM.Standard2.4"
-  description = "Shape of instances"
+  description = "3. Shape of instances"
 }
 
 variable "node_count" {
   default = "3"
-  description = "Number of instances to run"
+  description = "4. Number of instances to run"
 }
 
 variable "username" {
   default = "admin"
-  description = "Opscenter Username"
+  description = "5. Opscenter Username"
 }
 
 variable "password" {
   default = "admin"
-  description = "Opscenter Password"
+  description = "6. Opscenter Password"
 }
 
 variable "version" {
   default = "6.0.2"
-  description = "Datastax Version"
+  description = "7. Datastax Version"
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
