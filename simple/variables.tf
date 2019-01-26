@@ -5,45 +5,27 @@
 # ---------------------------------------------------------------------------------------------------------------------
 
 # Required by the OCI Provider
-variable "tenancy_ocid" {}
+variable "compartment_id" {}
 variable "region" {}
 
 # Key used to SSH to OCI VMs
-variable "ssh_public_key" {
-  description = "1:Public SSH Key for node access"
-}
-variable "ssh_private_key" {
-  description = "2:Private SSH Key for node access"
-}
+variable "ssh_public_key" {}
+variable "ssh_private_key" {}
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Optional variables
 # The defaults here will give you a cluster.  You can also modify these.
 # ---------------------------------------------------------------------------------------------------------------------
 
-variable "node_shape" {
-  default = "VM.Standard2.4"
-  description = "3:Shape of instances"
-}
-
-variable "node_count" {
-  default = "3"
-  description = "4:Number of instances to run"
-}
-
-variable "username" {
-  default = "admin"
-  description = "5:Opscenter Username"
-}
-
-variable "password" {
-  default = "admin"
-  description = "6:Opscenter Password"
-}
-
-variable "version" {
-  default = "6.0.2"
-  description = "7:Datastax Version"
+variable "dse" {
+  type = "map"
+  default = {
+    shape = "VM.Standard2.4"
+    node_count = 3
+    username = "admin"
+    password = "admin"
+    version = "6.0.2"
+  }
 }
 
 # ---------------------------------------------------------------------------------------------------------------------

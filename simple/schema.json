@@ -1,0 +1,67 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://cloud.oracle.com/schema.json",
+    "type": "object",
+    "title": "Datastax Variables",
+    "properties": {
+        "tenancy_id": {
+            "const": "$global::tenancy_id"
+        },
+        "compartment_id": {
+            "const": "$global::compartment_id"
+        },
+        "region": {
+            "const": "$global::region"
+        },
+        "dse": {
+            "type": "object",
+            "title": "Datastax Engine",
+            "properties": {
+                "shape": {
+                    "type": "string",
+                    "title": "Node Shape",
+                    "description": "Shape of Datastax Engine Nodes",
+                    "enum": [
+                        "VM.Standard1.1",
+                        "VM.Standard.E2.1",
+                        "VM.Standard1.2",
+                        "VM.Standard.E2.2",
+                        "VM.Standard1.4",
+                        "VM.Standard.E2.4",
+                        "VM.Standard1.8",
+                        "VM.Standard.E2.8",
+                        "VM.Standard1.16",
+                        "VM.Standard2.1",
+                        "VM.Standard2.2",
+                        "VM.Standard2.4",
+                        "VM.Standard2.8",
+                        "VM.Standard2.16",
+                        "VM.Standard2.24"
+                    ]
+                },
+                "node_count": {
+                    "type": "integer",
+                    "description": "Number of Nodes",
+                    "minimum": 1,
+                    "maximum": 10
+                },
+                "username": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 25
+                },
+                "password": {
+                    "type": "string",
+                    "description": "Password for OPS Center Admin",
+                    "format": "password",
+                    "default": "adminpwd"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "Version of Datastax Enterprise",
+                    "pattern": "^\\d+\\.\\d+\\.\\d+$"
+                }
+            }
+        }
+    }
+}
