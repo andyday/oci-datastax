@@ -62,6 +62,10 @@
                     "pattern": "^\\d+\\.\\d+\\.\\d+$"
                 }
             }
+        },
+        "images": {
+            "type": "object",
+            "format": "hidden"
         }
     }
 }
