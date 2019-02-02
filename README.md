@@ -3,9 +3,6 @@
 
 [![Deploy to OCI](https://img.shields.io/badge/-Deploy%20to%20OCI-blue.svg?style=for-the-badge)](https://console.r1.oracleiaas.com/orm?configoverride=%7B%22plugins%22%3A%7B%22orm%22%3A%7B%22name%22%3A%22orm%22%2C%22path%22%3A%22%2Form%22%2C%22url%22%3A%22https%3A%2F%2Flocalhost%3A8484%22%2C%22loadMethod%22%3A0%2C%22globals%22%3A%5B%22webpackJsonpoci_resourcemanager_plugin%22%2C%22ouiUIkit%22%2C%22ouiUIkitIcons%22%5D%7D%7D%7D&qs=andyday%2Foci-datastax%2Fsimple)
 
-## Prerequisites
-First off you'll need to do some pre deploy setup.  That's all detailed [here](https://github.com/cloud-partners/oci-prerequisites).
-
 ## Clone the Module
 Now, you'll want a local copy of this repo.  You can make that with the commands:
 
