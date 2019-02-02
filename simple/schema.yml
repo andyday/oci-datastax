@@ -1,19 +1,38 @@
+# The schema title is used as the label for all top-level variables 
+# All top-level variables not grouped go into a default group with
+# this as its label.
 title: Stack Variables
+
+# The top-level properties lists all of the top-level variables to enhance
 properties:
+  # tenancy_id is not a TF variable so this is skipped
   tenancy_id:
     const: "$global::tenancy_id"
+
+  # compartment_id and region are top-level variables to be auto populated.  
+  # Having a const with $global indicates to auto populate with the property 
+  # from the global state in the UI Plugin
   compartment_id:
     const: "$global::compartment_id"
   region:
     const: "$global::region"
+
+  # dse is creating a group of variables.  They will be grouped together in
+  # a FieldSet box.  The title will be the group label.
   dse:
     type: object
     title: Datastax Engine
     properties:
       shape:
         type: string
+
+        # title is used to make field label more friendly
         title: Node Shape
+
+        # description is used as the tooltip for the field.
         description: Shape of Datastax Engine Nodes
+
+        # enum creates a dropdown with available values.
         enum:
         - VM.Standard1.1
         - VM.Standard.E2.1
@@ -30,25 +49,37 @@ properties:
         - VM.Standard2.8
         - VM.Standard2.16
         - VM.Standard2.24
+
+      # node_count is input with a NumberInput with min and max set accordingly.
+      # min and max are used to create an input hint and for input validation.
       node_count:
         type: integer
         description: Number of Nodes
         minimum: 1
         maximum: 10
+
+      # strings are input with a TextInput if the maxLength is 60 or less; otherwise, TextArea.
+      # minLength and maxLength are used in hint and validation.
       username:
         type: string
         minLength: 3
         maxLength: 25
+
+      # password format creates a password type input.
       password:
         type: string
         description: Password for OPS Center Admin
         format: password
         default: adminpwd
+
+      # pattern is used as a regex validation
       version:
         type: string
         description: Version of Datastax Enterprise
         pattern: "^\\d+\\.\\d+\\.\\d+$"
         maxLength: 10
+
+  # hidden format hides this variable from the input.
   images:
     type: object
     format: hidden
